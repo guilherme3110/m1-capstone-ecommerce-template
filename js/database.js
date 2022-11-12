@@ -62,3 +62,36 @@ const data = [
     tag: ["Camisetas"],
   },
 ];
+
+let body = document.querySelector("body")
+
+let header = document.createElement('header')
+body.appendChild(header)
+
+let h1 = document.createElement('h1')
+h1.innerText = 'Weartake'
+header.appendChild(h1)
+
+
+let div = document.createElement('div')
+body.appendChild(div)
+
+let main = document.createElement("main")
+div.appendChild(main)
+
+let section = document.createElement('section')
+div.appendChild(section)
+
+let ul = document.createElement('ul')
+section.appendChild(ul)
+
+let li = document.createElement('li')
+ul.appendChild(li)
+
+let figure = document.createElement('figure')
+li.appendChild(figure)
+
+   
+
+
+
