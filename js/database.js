@@ -62,47 +62,125 @@ const data = [
     tag: ["Camisetas"],
   },
 ];
+
+
+let removCount = 0;
  
-let body = document.querySelector("body")
+function renderList(data){
+  for(let i = 0; i < data.length; i++){
+    
+  }
+}
+renderList(data)
 
-let header = document.createElement("header")
-body.appendChild(header)
+let secaoProduto = document.querySelector('.produtos')
+  for(let i = 0; i < data.length; i++){
 
-let h1 = document.createComment('h1')
-h1.innerHTML = 'Weartake'
-header.appendChild(h1)
-
-
-function renderLista(lista){
-  for(let i = 0; i < lista.length; i++){
-    let liProdutos = document.createElement("li")
-    liProdutos.classList.add('data')
+    liProduto = document.createElement('li')
 
     let img = document.createElement('img')
+    img.src = data[i].img
+
     let h3 = document.createElement('h3')
+    h3.classList.add = data[i].tag
+    h3.innerHTML = data[i].tag
+
     let h2 = document.createElement('h2')
+    h2.classList.add = data[i].nameItem
+    h2.innerText = data[i].nameItem
+
     let p = document.createElement('p')
+    p.classList.add = data[i].description
+    p.innerHTML = data[i].description
+
     let span = document.createElement('span')
-    let button = document.createElement('button');
+    span.classList.add = 'valor'
+    span.innerText = `R$ ${data[i].value},00`
 
-    liProdutos.appendChild(img)
-    liProdutos.appendChild(h3)
-    liProdutos.appendChild(h2)
-    liProdutos.appendChild(p)
-    liProdutos.appendChild(span)
-    liProdutos.appendChild(button);
-
-    }
+    let button = document.createElement('button')
+    button.classList.add('buttonProduto')
+    button.innerText = 'adicionar ao carrinho'
+    button.addEventListener('click', function(e){
+      addProduto(data[i])
+      
+    })
+    
+    secaoProduto.appendChild(liProduto)
+    liProduto.appendChild(img)
+    liProduto.appendChild(h3)
+    liProduto.appendChild(h2)
+    liProduto.appendChild(p)
+    liProduto.appendChild(span)
+    liProduto.appendChild(button)
 }
 
-renderLista(data)
+ // função para remover o produto
+    function addProduto(produto){
+      let carrinho = document.querySelector('#carrinho')
+      let frase = document.querySelector('#frase')
+      let li = document.createElement('li')
+      let img = document.createElement('img')
+      let h2 = document.createElement('h2')
+      let span = document.createElement('span')
+      let button = document.createElement('button')
+
+       if(frase != null){
+         frase.remove();
+       }
+
+      li.id = produto.id;
+      img.src = produto.img;
+      h2.innerText = produto.nameItem;
+      button.innerHTML = 'remover';
+      span.innerText = `R$ ${produto.value},00`
+     
+
+
+      button.addEventListener('click', function(e){
+        
+        li.remove();
+        
+        
+        removCount--;
+
+      })
+      li.appendChild(img)
+      li.appendChild(h2)
+      li.appendChild(span)
+      li.appendChild(button)
+
+       carrinho.appendChild(li)
+
+    }
+
+//  let newArr = [];
+
+
+//  // carrinhos de compras.
+//  function carrinhoCompras(){
+//    for(let i = 0; i < data.length; i++){
+
+    
+
+//    }
+//  }
+ 
+
+
+// function buttonAdd(){
+//     let button = document.querySelectorAll('.buttonProduto')
+//     console.log(button)
+//     for(let i = 0; i < button.length; i++){
+//       button[i].addEventListener('click', function(e){console.log(e)})
+//     }
+// }
+
+// buttonAdd()
 
 
 
 
 
-let section = document.createElement('section')
-main.appendChild(section)
 
 
 
