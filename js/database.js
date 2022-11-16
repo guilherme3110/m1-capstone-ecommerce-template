@@ -127,22 +127,16 @@ let secaoProduto = document.querySelector('.produtos')
        if(frase != null){
          frase.remove();
        }
-
-      li.id = produto.id;
       img.src = produto.img;
       h2.innerText = produto.nameItem;
       button.innerHTML = 'remover';
       span.innerText = `R$ ${produto.value},00`
-     
-
-
+      
+      // botão para remover o item
       button.addEventListener('click', function(e){
-        
         li.remove();
-        
-        
         removCount--;
-
+        
       })
       li.appendChild(img)
       li.appendChild(h2)
@@ -151,31 +145,11 @@ let secaoProduto = document.querySelector('.produtos')
 
        carrinho.appendChild(li)
 
+       
+
     }
 
-//  let newArr = [];
 
-
-//  // carrinhos de compras.
-//  function carrinhoCompras(){
-//    for(let i = 0; i < data.length; i++){
-
-    
-
-//    }
-//  }
- 
-
-
-// function buttonAdd(){
-//     let button = document.querySelectorAll('.buttonProduto')
-//     console.log(button)
-//     for(let i = 0; i < button.length; i++){
-//       button[i].addEventListener('click', function(e){console.log(e)})
-//     }
-// }
-
-// buttonAdd()
 
 
 
