@@ -5,86 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
     <script src="/js/database.js" defer ></script>
 </head>
 <body>
 
     <header>
-        <h1 class="logo"> Weartake </h1> 
+        <h1> Weartake </h1> 
         <nav class="menu">
-            <p>Todos</p>
-            <p>Acessorios</p>
-            <p>Calçados</p>
-            <p>Camisetas</p>
+            <ul class="menu-ul">
+                <li>Todos</li>
+                <li>Acessorios</li>
+                <li>Calçados</li>
+                <li>Camisetas</li>
+            </ul>
         </nav>
     </header>
-    
-    <div class="container-Principal">
-        <main>
-            <section>
-                    <ul>
-                        <li>
-                            <figure>
-                                <img src="./img/camiseta_preta.svg" alt="primeiro item">
-                            </figure>
-                            <p>Light jacket </p>
-                            <span>Adicione um pouco de energia ao seu guarda roupa de inverno com esta jaqueta vibrante</span>
-                            <p>R$ 100.00</p>
-                            <button>Adicionar ao carrinho</button>
-                        </li>
-                        <li>
-                            <figure>
-                                <img src="./img/gorro.svg" alt="primeiro item">
-                            </figure>
-                            <p>Black Hat </p>
-                            <span>O gorro Next.js chegou! Esta beldade bordada tem um ajuste confortável que garante que ...</span>
-                            <p>R$ 100.00</p>
-                            <button>Adicionar ao carrinho</button>
-                        </li>
-                        <li>
-                            <figure>
-                                <img src="./img/mascara.svg" alt="primeiro item">
-                            </figure>
-                            <p>Mask </p>
-                            <span>Esta máscara facil durável é feita de duas camadas de tecido tratado e possui presilhas...</span>
-                            <p>R$ 100.00</p>
-                            <button>Adicionar ao carrinho</button>
-                        </li>
-                        <li>
-                            <figure>
-                                <img src="./img/jaqueta.svg" alt="primeiro item">
-                            </figure>
-                            <p>Jaqueta </p>
-                            <span>Está jaqueta é imprescindivel no seu guarda-roupa.</span>
-                            <p>R$ 100.00</p>
-                            <button>Adicionar ao carrinho</button>
-                        </li>
-                        <li>
-                            <figure>
-                                <img src="./img/moletom.svg" alt="primeiro item">
-                            </figure>
-                            <p>moletom </p>
-                            <span>Proteja-se do frio usando esse belissimo moletom </span>
-                            <p>R$ 100.00</p>
-                            <button>Adicionar ao carrinho</button>
-                        </li>
-                        <li>
-                            <figure>
-                                <img src="./img/camiseta_branca.svg" alt="primeiro item">
-                            </figure>
-                            <p> Short-Sleeve T-Shirt</p>
-                            <span>Agora você encontrou a camiseta básica do seu guarda-roupa. È feito de um mais fino...</span>
-                            <p>R$ 100.00</p>
-                            <button>Adicionar ao carrinho</button>
-                        </li>
-                    </ul>
-                </section>
-                <aside>
-                    <button>Pesquisar</button>
-                    <h2>Carrinho de compras</h2>
-                </aside>    
-        </main>
-              
-    </div>
-</body>
+    <main>
+    <section>
+        <ul class="produtos">
+            <li id="p_1">
+                <img src="img/camiseta_branca.svg" alt="primeiroItem">
+                <h3>Camisetas</h3>
+                <h2>Lightweight Jacket</h2>
+                <p>Adicione um pouco de energia ao seu
+                    guarda roupa de inverno com esta
+                    jaqueta vibrante...</p>
+                <span>R$ 100.00</span>
+                <button id="pd_1">Adicionar ao carrinho</button>
+            </li>
+            <li id="p_2">
+                <img src="img/camiseta_preta.svg" alt="segundoItem">
+                <h3>Acessorios</h3>
+                <h2>T-Shirt</h2>
+                <p>Esta t-shirt é imprescindível no seu guarda-roupa, combinando o caimento intemporal de...</p>
+                <span>R$ 100.00</span>
+                <button id="pd_2">Adicionar ao carrinho</button>
+            </li>
+            <li id="p_3">
+                <img src="img/gorro.svg" alt="terceiroItem">
+                <h3>Acessorios</h3>
+                <h2>Black Hat</h2>
+                <p>O gorro Next.js chegou! Esta beldade bordada tem um ajuste confortável que garante que...</p>
+                <span>R$ 100.00</span>
+                <button id="pd_3">Adicionar ao carrinho</button>
+            </li>
+            <li id="p_4">
+                <img src="img/jaqueta.svg" alt="quartoItem">
+                <h3>Camisetas</h3>
+                <h2>Champion Packable Jacket</h2>
+                <p>Proteja se dos elementos com esta
+                    jaqueta embalável Champion. Esta
+                    jaqueta de poliést...</p>
+                <span>R$ 100.00</span>
+                <button id="pd_4">Adicionar ao carrinho</button>
+            </li>
+            <li id="p_5">
+                <img src="img/mascara.svg" alt="quintoItem">
+                <h3>Acessorios</h3>
+                <h2>Mask</h2>
+                <p>Esta máscara facial durável é feita de duas camadas de tecido tratado e possui presilhas...</p>
+                <span>R$ 100.00</span>
+                <button id="pd_5">Adicionar ao carrinho</button>
+            </li>
+            <li id="p_6">
+                <img src="img/moletom.svg" alt="sextoItem">
+                <h3>Camisetas</h3>
+                <h2>Champion Packable Jacket</h2>
+                <p>Proteja-se dos elementos com esta jaqueta embalável Champion. Esta jaqueta de poliést...</p>
+                <span>R$ 100.00</span>
+                <button id="pd_6">Adicionar ao carrinho</button>
+            </li>
+           
+        </ul>
+    </section>
+
+
+    <aside>
+       <form>
+            <input type="text"  class="aba-pesquisa" placeholder="Digite aqui sua pesquisa"> 
+            <button class="pesquisa" type="button">Pesquisar</button>
+
+            <h4>Carrinhos de compras</h4>
+            <p>Carrinho vázio</p>
+            <span></span>
+       </form>
+       
+          
+
+        
+    </aside>
+     </main>
+</body> 
 </html>

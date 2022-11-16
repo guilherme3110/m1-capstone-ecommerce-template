@@ -62,36 +62,49 @@ const data = [
     tag: ["Camisetas"],
   },
 ];
-
+ 
 let body = document.querySelector("body")
 
-let header = document.createElement('header')
+let header = document.createElement("header")
 body.appendChild(header)
 
-let h1 = document.createElement('h1')
-h1.innerText = 'Weartake'
+let h1 = document.createComment('h1')
+h1.innerHTML = 'Weartake'
 header.appendChild(h1)
 
 
-let div = document.createElement('div')
-body.appendChild(div)
+function renderLista(lista){
+  for(let i = 0; i < lista.length; i++){
+    let liProdutos = document.createElement("li")
+    liProdutos.classList.add('data')
 
-let main = document.createElement("main")
-div.appendChild(main)
+    let img = document.createElement('img')
+    let h3 = document.createElement('h3')
+    let h2 = document.createElement('h2')
+    let p = document.createElement('p')
+    let span = document.createElement('span')
+    let button = document.createElement('button');
+
+    liProdutos.appendChild(img)
+    liProdutos.appendChild(h3)
+    liProdutos.appendChild(h2)
+    liProdutos.appendChild(p)
+    liProdutos.appendChild(span)
+    liProdutos.appendChild(button);
+
+    }
+}
+
+renderLista(data)
+
+
+
+
 
 let section = document.createElement('section')
-div.appendChild(section)
+main.appendChild(section)
 
-let ul = document.createElement('ul')
-section.appendChild(ul)
 
-let li = document.createElement('li')
-ul.appendChild(li)
-
-let figure = document.createElement('figure')
-li.appendChild(figure)
-
-   
 
 
 
